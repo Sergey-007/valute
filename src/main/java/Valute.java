@@ -1,24 +1,21 @@
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import java.io.Serializable;
+import java.util.List;
 
-@XmlType(name = "Valute")
-@XmlRootElement
-public class Valute implements Serializable {
+@XmlRootElement(name = "valute")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Valute{
 
-    private long NumCode;
-    private String CharCode;
-    private long Nominal;
-    private String Name;
-    private double Value;
+    @XmlElement(name = "valCurs")
+    private List<ValCurs> valute = null;
 
-    public double getValue() {
-        return Value;
+    public List<ValCurs> getEmployees() {
+        return valute;
     }
 
-    @XmlElement(name = "Value")
-    public void setValue(double value) {
-        Value = value;
+    public void setEmployees(List<ValCurs> employees) {
+        this.valute = valute;
     }
 }
