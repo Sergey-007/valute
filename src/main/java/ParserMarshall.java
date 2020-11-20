@@ -4,6 +4,7 @@ import javax.xml.bind.Marshaller;
 import java.text.ParseException;
 import java.util.ArrayList;
 
+//unnessesary
 public class ParserMarshall {
     static ValCurs valCurs;
     static
