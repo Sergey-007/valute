@@ -22,6 +22,7 @@ public class Parser {
         try (Response response = client.newCall(request).execute()) {
             ValCurs valCurs = (ValCurs) unmarshaller.unmarshal(response.body().byteStream());
             return valCurs;
+
         }
 
     }
