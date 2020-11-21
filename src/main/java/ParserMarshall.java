@@ -22,7 +22,7 @@ public class ParserMarshall {
         val1.setAUD("USD");
         val1.setNominal(1);
         val1.setName("Something");
-        val1.setValue(12.5);
+        val1.setValue("12.5");
 
         Valute val2 = new Valute();
         val2.setID("EU265");
@@ -30,7 +30,7 @@ public class ParserMarshall {
         val2.setAUD("EUR");
         val2.setNominal(1);
         val2.setName("Something else");
-        val2.setValue(22.0);
+        val2.setValue("22.0");
 
         //Add the employees in list
         valCurs.getValCurs().add(val1);

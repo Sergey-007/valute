@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "valute")
+@XmlRootElement(name = "Valute")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Valute {
 
@@ -12,7 +12,7 @@ public class Valute {
     private String AUD;
     private Integer Nominal;
     private String Name;
-    private double Value;
+    private String Value;
     @XmlAttribute
     private String ID;
 
@@ -40,10 +40,10 @@ public class Valute {
     public void setName(String name) {
         Name = name;
     }
-    public double getValue() {
+    public String getValue() {
         return Value;
     }
-    public void setValue(double value) {
+    public void setValue(String  value) {
         Value = value;
     }
 
