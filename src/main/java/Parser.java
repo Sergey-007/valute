@@ -26,8 +26,12 @@ public class Parser {
         Parser example = new Parser();
         ValCurs response = example.run("http://www.cbr.ru/scripts/xml_daily.asp");
 
-        Valute resp = response.getValCurs().get(8);
-        System.out.println(resp.getName());
-        System.out.println(resp.getValue());
+        for (int i = 0; i < response.getValCurs().size(); i++){
+            Valute respo = response.getValCurs().get(i);
+            if (respo.getName().equals("Гонконгских долларов")){
+                System.out.println("Курс рубля относительно \n" + respo.getName());
+                System.out.println(respo.getValue() + " рублей");
+            }
+        }
     }
 }
